@@ -690,6 +690,7 @@ function OpenSocietyActionsMenu()
                       {label = _U('rhumfruit'),     value = 'rhumfruit'},
                       {label = _U('teqpaf'),        value = 'teqpaf'},
                       {label = _U('rhumcoca'),      value = 'rhumcoca'},
+                      {label = _U('mojito'),        value = 'mojito'},
                       {label = _U('mixapero'),      value = 'mixapero'},
                       {label = _U('metreshooter'),  value = 'metreshooter'},
                       {label = _U('jagercerbere'),  value = 'jagercerbere'},

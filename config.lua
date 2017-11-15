@@ -8,6 +8,8 @@ Config.EnableHelicopters          = false
 Config.MaxInService               = -1
 Config.Locale                     = 'fr'
 
+Config.MissCraft                  = 10 -- %
+
 
 Config.AuthorizedVehicles = {
     { name = 'unicornbus',  label = 'Vanilla Unicorn Bus' },
@@ -143,7 +145,8 @@ Config.Zones = {
         Color = { r = 255, g = 255, b = 255 },
         Type  = 23,
         Items = {
-            { name = 'ice',     label = 'Glaçon',       price = 1 }
+            { name = 'ice',     label = 'Glaçon',               price = 1 },
+            { name = 'menthe',  label = 'Feuille de menthe',    price = 2 }
         },
     },
 

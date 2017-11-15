@@ -156,17 +156,17 @@ AddEventHandler('esx_unicornjob:craftingCoktails', function(itemValue)
             local bethQuantity      = xPlayer.getInventoryItem('jager').count
 
             if alephQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_energy'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('energy') .. '~w~')
             elseif bethQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_jager'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('jager') .. '~w~')
             else
                 local chanceToMiss = math.random(100)
-                if chanceToMiss <= 10 then
+                if chanceToMiss <= Config.MissCraft then
                     TriggerClientEvent('esx:showNotification', _source, _U('craft_miss'))
                     xPlayer.removeInventoryItem('energy', 2)
                     xPlayer.removeInventoryItem('jager', 2)
                 else
-                    TriggerClientEvent('esx:showNotification', _source, _U('craft_jagerbomb'))
+                    TriggerClientEvent('esx:showNotification', _source, _U('craft') .. _U('jagerbomb') .. ' ~w~!')
                     xPlayer.removeInventoryItem('energy', 2)
                     xPlayer.removeInventoryItem('jager', 2)
                     xPlayer.addInventoryItem('jagerbomb', 1)
@@ -186,20 +186,20 @@ AddEventHandler('esx_unicornjob:craftingCoktails', function(itemValue)
             local gimelQuantity     = xPlayer.getInventoryItem('ice').count
 
             if alephQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_limonade'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('limonade') .. '~w~')
             elseif bethQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_vodka'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('vodka') .. '~w~')
             elseif gimelQuantity < 1 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_ice'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('ice') .. '~w~')
             else
                 local chanceToMiss = math.random(100)
-                if chanceToMiss <= 10 then
+                if chanceToMiss <= Config.MissCraft then
                     TriggerClientEvent('esx:showNotification', _source, _U('craft_miss'))
                     xPlayer.removeInventoryItem('limonade', 2)
                     xPlayer.removeInventoryItem('vodka', 2)
                     xPlayer.removeInventoryItem('ice', 1)
                 else
-                    TriggerClientEvent('esx:showNotification', _source, _U('craft_golem'))
+                    TriggerClientEvent('esx:showNotification', _source, _U('craft') .. _U('golem') .. ' ~w~!')
                     xPlayer.removeInventoryItem('limonade', 2)
                     xPlayer.removeInventoryItem('vodka', 2)
                     xPlayer.removeInventoryItem('ice', 1)
@@ -219,17 +219,17 @@ AddEventHandler('esx_unicornjob:craftingCoktails', function(itemValue)
             local bethQuantity      = xPlayer.getInventoryItem('whisky').count
 
             if alephQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_soda'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('soda') .. '~w~')
             elseif bethQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_whisky'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('whisky') .. '~w~')
             else
                 local chanceToMiss = math.random(100)
-                if chanceToMiss <= 10 then
+                if chanceToMiss <= Config.MissCraft then
                     TriggerClientEvent('esx:showNotification', _source, _U('craft_miss'))
                     xPlayer.removeInventoryItem('soda', 2)
                     xPlayer.removeInventoryItem('whisky', 2)
                 else
-                    TriggerClientEvent('esx:showNotification', _source, _U('craft_whiskycoca'))
+                    TriggerClientEvent('esx:showNotification', _source, _U('craft') .. _U('whiskycoca') .. ' ~w~!')
                     xPlayer.removeInventoryItem('soda', 2)
                     xPlayer.removeInventoryItem('whisky', 2)
                     xPlayer.addInventoryItem('whiskycoca', 1)
@@ -248,17 +248,17 @@ AddEventHandler('esx_unicornjob:craftingCoktails', function(itemValue)
             local bethQuantity      = xPlayer.getInventoryItem('rhum').count
 
             if alephQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_soda'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('soda') .. '~w~')
             elseif bethQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_rhum'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('rhum') .. '~w~')
             else
                 local chanceToMiss = math.random(100)
-                if chanceToMiss <= 10 then
+                if chanceToMiss <= Config.MissCraft then
                     TriggerClientEvent('esx:showNotification', _source, _U('craft_miss'))
                     xPlayer.removeInventoryItem('soda', 2)
                     xPlayer.removeInventoryItem('rhum', 2)
                 else
-                    TriggerClientEvent('esx:showNotification', _source, _U('craft_rhumcoca'))
+                    TriggerClientEvent('esx:showNotification', _source, _U('craft') .. _U('rhumcoca') .. ' ~w~!')
                     xPlayer.removeInventoryItem('soda', 2)
                     xPlayer.removeInventoryItem('rhum', 2)
                     xPlayer.addInventoryItem('rhumcoca', 1)
@@ -278,20 +278,20 @@ AddEventHandler('esx_unicornjob:craftingCoktails', function(itemValue)
             local gimelQuantity     = xPlayer.getInventoryItem('ice').count
 
             if alephQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_energy'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('energy') .. '~w~')
             elseif bethQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_vodka'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('vodka') .. '~w~')
             elseif gimelQuantity < 1 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_ice'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('ice') .. '~w~')
             else
                 local chanceToMiss = math.random(100)
-                if chanceToMiss <= 10 then
+                if chanceToMiss <= Config.MissCraft then
                     TriggerClientEvent('esx:showNotification', _source, _U('craft_miss'))
                     xPlayer.removeInventoryItem('energy', 2)
                     xPlayer.removeInventoryItem('vodka', 2)
                     xPlayer.removeInventoryItem('ice', 1)
                 else
-                    TriggerClientEvent('esx:showNotification', _source, _U('craft_vodkaenergy'))
+                    TriggerClientEvent('esx:showNotification', _source, _U('craft') .. _U('vodkaenergy') .. ' ~w~!')
                     xPlayer.removeInventoryItem('energy', 2)
                     xPlayer.removeInventoryItem('vodka', 2)
                     xPlayer.removeInventoryItem('ice', 1)
@@ -312,20 +312,20 @@ AddEventHandler('esx_unicornjob:craftingCoktails', function(itemValue)
             local gimelQuantity     = xPlayer.getInventoryItem('ice').count
 
             if alephQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_jusfruit'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('jusfruit') .. '~w~')
             elseif bethQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_vodka'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('vodka') .. '~w~')
             elseif gimelQuantity < 1 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_ice'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('ice') .. '~w~')
             else
                 local chanceToMiss = math.random(100)
-                if chanceToMiss <= 10 then
+                if chanceToMiss <= Config.MissCraft then
                     TriggerClientEvent('esx:showNotification', _source, _U('craft_miss'))
                     xPlayer.removeInventoryItem('jusfruit', 2)
                     xPlayer.removeInventoryItem('vodka', 2)
                     xPlayer.removeInventoryItem('ice', 1)
                 else
-                    TriggerClientEvent('esx:showNotification', _source, _U('craft_vodkafruit'))
+                    TriggerClientEvent('esx:showNotification', _source, _U('craft') .. _U('vodkafruit') .. ' ~w~!')
                     xPlayer.removeInventoryItem('jusfruit', 2)
                     xPlayer.removeInventoryItem('vodka', 2)
                     xPlayer.removeInventoryItem('ice', 1)
@@ -346,20 +346,20 @@ AddEventHandler('esx_unicornjob:craftingCoktails', function(itemValue)
             local gimelQuantity     = xPlayer.getInventoryItem('ice').count
 
             if alephQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_jusfruit'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('jusfruit') .. '~w~')
             elseif bethQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_rhum'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('rhum') .. '~w~')
             elseif gimelQuantity < 1 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_ice'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('ice') .. '~w~')
             else
                 local chanceToMiss = math.random(100)
-                if chanceToMiss <= 10 then
+                if chanceToMiss <= Config.MissCraft then
                     TriggerClientEvent('esx:showNotification', _source, _U('craft_miss'))
                     xPlayer.removeInventoryItem('jusfruit', 2)
                     xPlayer.removeInventoryItem('rhum', 2)
                     xPlayer.removeInventoryItem('ice', 1)
                 else
-                    TriggerClientEvent('esx:showNotification', _source, _U('craft_rhumfruit'))
+                    TriggerClientEvent('esx:showNotification', _source, _U('craft') .. _U('rhumfruit') .. ' ~w~!')
                     xPlayer.removeInventoryItem('jusfruit', 2)
                     xPlayer.removeInventoryItem('rhum', 2)
                     xPlayer.removeInventoryItem('ice', 1)
@@ -379,20 +379,59 @@ AddEventHandler('esx_unicornjob:craftingCoktails', function(itemValue)
             local bethQuantity      = xPlayer.getInventoryItem('tequila').count
 
             if alephQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_limonade'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('limonade') .. '~w~')
             elseif bethQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_tequila'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('tequila') .. '~w~')
             else
                 local chanceToMiss = math.random(100)
-                if chanceToMiss <= 10 then
+                if chanceToMiss <= Config.MissCraft then
                     TriggerClientEvent('esx:showNotification', _source, _U('craft_miss'))
                     xPlayer.removeInventoryItem('limonade', 2)
                     xPlayer.removeInventoryItem('tequila', 2)
                 else
-                    TriggerClientEvent('esx:showNotification', _source, _U('craft_teqpaf'))
+                    TriggerClientEvent('esx:showNotification', _source, _U('craft') .. _U('teqpaf') .. ' ~w~!')
                     xPlayer.removeInventoryItem('limonade', 2)
                     xPlayer.removeInventoryItem('tequila', 2)
                     xPlayer.addInventoryItem('teqpaf', 1)
+                end
+            end
+
+        end)
+    end
+
+    if _itemValue == 'mojito' then
+        SetTimeout(10000, function()        
+
+            local xPlayer           = ESX.GetPlayerFromId(_source)
+
+            local alephQuantity     = xPlayer.getInventoryItem('rhum').count
+            local bethQuantity      = xPlayer.getInventoryItem('limonade').count
+            local gimelQuantity     = xPlayer.getInventoryItem('menthe').count
+            local daletQuantity      = xPlayer.getInventoryItem('ice').count
+
+            if alephQuantity < 2 then
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('rhum') .. '~w~')
+            elseif bethQuantity < 2 then
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('limonade') .. '~w~')
+            elseif gimelQuantity < 2 then
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('menthe') .. '~w~')
+            elseif daletQuantity < 1 then
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('ice') .. '~w~')
+            else
+                local chanceToMiss = math.random(100)
+                if chanceToMiss <= Config.MissCraft then
+                    TriggerClientEvent('esx:showNotification', _source, _U('craft_miss'))
+                    xPlayer.removeInventoryItem('rhum', 2)
+                    xPlayer.removeInventoryItem('limonade', 2)
+                    xPlayer.removeInventoryItem('menthe', 2)
+                    xPlayer.removeInventoryItem('ice', 1)
+                else
+                    TriggerClientEvent('esx:showNotification', _source, _U('craft') .. _U('mojito') .. ' ~w~!')
+                    xPlayer.removeInventoryItem('rhum', 2)
+                    xPlayer.removeInventoryItem('limonade', 2)
+                    xPlayer.removeInventoryItem('menthe', 2)
+                    xPlayer.removeInventoryItem('ice', 1)
+                    xPlayer.addInventoryItem('mojito', 1)
                 end
             end
 
@@ -410,23 +449,23 @@ AddEventHandler('esx_unicornjob:craftingCoktails', function(itemValue)
             local daletQuantity     = xPlayer.getInventoryItem('bolchips').count
 
             if alephQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_bolcacahuetes'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('bolcacahuetes') .. '~w~')
             elseif bethQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_bolnoixcajou'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('bolnoixcajou') .. '~w~')
             elseif gimelQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_bolpistache'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('bolpistache') .. '~w~')
             elseif daletQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_bolchips'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('bolchips') .. '~w~')
             else
                 local chanceToMiss = math.random(100)
-                if chanceToMiss <= 10 then
+                if chanceToMiss <= Config.MissCraft then
                     TriggerClientEvent('esx:showNotification', _source, _U('craft_miss'))
                     xPlayer.removeInventoryItem('bolcacahuetes', 2)
                     xPlayer.removeInventoryItem('bolnoixcajou', 2)
                     xPlayer.removeInventoryItem('bolpistache', 2)
                     xPlayer.removeInventoryItem('bolchips', 1)
                 else
-                    TriggerClientEvent('esx:showNotification', _source, _U('craft_mixapero'))
+                    TriggerClientEvent('esx:showNotification', _source, _U('craft') .. _U('mixapero') .. ' ~w~!')
                     xPlayer.removeInventoryItem('bolcacahuetes', 2)
                     xPlayer.removeInventoryItem('bolnoixcajou', 2)
                     xPlayer.removeInventoryItem('bolpistache', 2)
@@ -449,23 +488,23 @@ AddEventHandler('esx_unicornjob:craftingCoktails', function(itemValue)
             local daletQuantity     = xPlayer.getInventoryItem('tequila').count
 
             if alephQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_jager'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('jager') .. '~w~')
             elseif bethQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_vodka'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('vodka') .. '~w~')
             elseif gimelQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_whisky'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('whisky') .. '~w~')
             elseif daletQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_tequila'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('tequila') .. '~w~')
             else
                 local chanceToMiss = math.random(100)
-                if chanceToMiss <= 10 then
+                if chanceToMiss <= Config.MissCraft then
                     TriggerClientEvent('esx:showNotification', _source, _U('craft_miss'))
                     xPlayer.removeInventoryItem('jager', 2)
                     xPlayer.removeInventoryItem('vodka', 2)
                     xPlayer.removeInventoryItem('whisky', 2)
                     xPlayer.removeInventoryItem('tequila', 2)
                 else
-                    TriggerClientEvent('esx:showNotification', _source, _U('craft_metreshooter'))
+                    TriggerClientEvent('esx:showNotification', _source, _U('craft') .. _U('metreshooter') .. ' ~w~!')
                     xPlayer.removeInventoryItem('jager', 2)
                     xPlayer.removeInventoryItem('vodka', 2)
                     xPlayer.removeInventoryItem('whisky', 2)
@@ -487,20 +526,20 @@ AddEventHandler('esx_unicornjob:craftingCoktails', function(itemValue)
             local gimelQuantity     = xPlayer.getInventoryItem('tequila').count
 
             if alephQuantity < 1 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_jagerbomb'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('jagerbomb') .. '~w~')
             elseif bethQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_vodka'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('vodka') .. '~w~')
             elseif gimelQuantity < 2 then
-                TriggerClientEvent('esx:showNotification', _source, _U('not_enough_tequila'))
+                TriggerClientEvent('esx:showNotification', _source, _U('not_enough') .. _U('tequila') .. '~w~')
             else
                 local chanceToMiss = math.random(100)
-                if chanceToMiss <= 10 then
+                if chanceToMiss <= Config.MissCraft then
                     TriggerClientEvent('esx:showNotification', _source, _U('craft_miss'))
                     xPlayer.removeInventoryItem('jagerbomb', 1)
                     xPlayer.removeInventoryItem('vodka', 2)
                     xPlayer.removeInventoryItem('tequila', 2)
                 else
-                    TriggerClientEvent('esx:showNotification', _source, _U('craft_jagercerbere'))
+                    TriggerClientEvent('esx:showNotification', _source, _U('craft') .. _U('jagercerbere') .. ' ~w~!')
                     xPlayer.removeInventoryItem('jagerbomb', 1)
                     xPlayer.removeInventoryItem('vodka', 2)
                     xPlayer.removeInventoryItem('tequila', 2)

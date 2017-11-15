@@ -55,8 +55,10 @@ INSERT INTO `items` (`name`, `label`, `limit`) VALUES
     ('rhumfruit', 'Rhum-jus de fruits', 5),
     ('teqpaf', "Teq'paf", 5),
     ('rhumcoca', 'Rhum-coca', 5),
+    ('mojito', 'Mojito', 5),
     ('ice', 'Glaçon', 5),
     ('mixapero', 'Mix Apéritif', 3),
     ('metreshooter', 'Mètre de shooter', 3),
-    ('jagercerbere', 'Jäger Cerbère', 3)
+    ('jagercerbere', 'Jäger Cerbère', 3),
+    ('menthe', 'Feuille de menthe', 10)
 ;
