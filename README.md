@@ -105,10 +105,10 @@ end)
   * Cloakroom, Vault, Fridge, Vehicles, BossActions
   * Cloakroom : Dancer clothing with special movement effect, multiple clothes for men or women
   * Shops (harvesting) for components (alcoholic drinks, appetizers, non-alcoholic drinks)
-  * Crafting menu for Bosses + Barman (only with the right clothing) : coktails, mix appetizers
+  * Crafting menu for Bosses + Bartender (only with the right clothing) : coktails, mix appetizers
   * Spawning car without dust
-  * Transport marker to be behind the bar
-  * Players can miss the crafting par (~10% miss) and lose the components used
+  * Teleport marker to be behind the bar
+  * Players can miss the crafting part (~10% miss) and lose the components used
   * Billing menu
   * Girl are not supplied
 
