@@ -35,19 +35,20 @@ start esx_unicornjob
    You can config VaultManagement & Helicopters with true/false (don't forget to comment the area in the same file)
 
 6) If you want real effects, add items and effects in esx_basicneeds and esx_optionalsneeds.
+
 Here are examples of what you could add:
 
 esx_basicneeds\server\main.lua:
 ```lua
 ESX.RegisterUsableItem('icetea', function(source)
 
-	local xPlayer = ESX.GetPlayerFromId(source)
+    local xPlayer = ESX.GetPlayerFromId(source)
 
-	xPlayer.removeInventoryItem('icetea', 1)
+    xPlayer.removeInventoryItem('icetea', 1)
 
-	TriggerClientEvent('esx_status:add', source, 'thirst', 300000)
-	TriggerClientEvent('esx_basicneeds:onDrink', source)
-	TriggerClientEvent('esx:showNotification', source, _U('used_icetea'))
+    TriggerClientEvent('esx_status:add', source, 'thirst', 300000)
+    TriggerClientEvent('esx_basicneeds:onDrink', source)
+    TriggerClientEvent('esx:showNotification', source, _U('used_icetea'))
 
 end)
 
@@ -70,27 +71,27 @@ esx_optionalneeds\server\main.lua:
 ```lua
 ESX.RegisterUsableItem('tequila', function(source)
 
-	local xPlayer = ESX.GetPlayerFromId(source)
+    local xPlayer = ESX.GetPlayerFromId(source)
 
-	xPlayer.removeInventoryItem('tequila', 1)
+    xPlayer.removeInventoryItem('tequila', 1)
 
-	TriggerClientEvent('esx_status:add', source, 'drunk', 300000)
-	TriggerClientEvent('esx_optionalneeds:onDrink', source)
-	TriggerClientEvent('esx:showNotification', source, _U('used_tequila'))
+    TriggerClientEvent('esx_status:add', source, 'drunk', 300000)
+    TriggerClientEvent('esx_optionalneeds:onDrink', source)
+    TriggerClientEvent('esx:showNotification', source, _U('used_tequila'))
 
 end)
 
 ESX.RegisterUsableItem('jagerbomb', function(source)
 
-	local xPlayer = ESX.GetPlayerFromId(source)
+    local xPlayer = ESX.GetPlayerFromId(source)
 
-	xPlayer.removeInventoryItem('jagerbomb', 1)
+    xPlayer.removeInventoryItem('jagerbomb', 1)
 
     TriggerClientEvent('esx_status:add', source, 'drunk', 500000)
     TriggerClientEvent('esx_status:remove', source, 'hunger', 10000)
     TriggerClientEvent('esx_status:remove', source, 'thirst', 70000)
-	TriggerClientEvent('esx_optionalneeds:onDrink', source)
-	TriggerClientEvent('esx:showNotification', source, _U('used_jagerbomb'))
+    TriggerClientEvent('esx_optionalneeds:onDrink', source)
+    TriggerClientEvent('esx:showNotification', source, _U('used_jagerbomb'))
 
 end)
 ```
@@ -115,6 +116,6 @@ end)
 
 [SHOPS (HARVESTING) AREAS]
 
-Alcoholic drinks => https://i.imgur.com/CIrpHfm.png
-Non-alcoholic drinks => https://i.imgur.com/QC3UeA2.png
-Appetizers => https://i.imgur.com/YYYrAQP.png
+* Alcoholic drinks => https://i.imgur.com/CIrpHfm.png
+* Non-alcoholic drinks => https://i.imgur.com/QC3UeA2.png
+* Appetizers => https://i.imgur.com/YYYrAQP.png
