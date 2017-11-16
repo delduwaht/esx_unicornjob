@@ -1367,7 +1367,7 @@ Citizen.CreateThread(function()
           else
 
             if
-              GetEntityModel(vehicle) == GetHashKey('unicornbus')
+              GetEntityModel(vehicle) == GetHashKey('rentalbus')
             then
               TriggerServerEvent('esx_service:disableService', 'unicorn')
             end
@@ -1399,11 +1399,11 @@ Citizen.CreateThread(function()
       end
 
     end
---[[
+
     if IsControlJustReleased(0,  Keys['F6']) and IsJobTrue() and not ESX.UI.Menu.IsOpen('default', GetCurrentResourceName(), 'unicorn_actions') then
         OpenSocietyActionsMenu()
     end
-]]--
+
   end
 end)
 
@@ -1488,20 +1488,3 @@ Citizen.CreateThread(function()
 end)
 
 -----------------------
-
-
----------------------------------------------------------------------------------------------------------
---NB : gestion des menu
----------------------------------------------------------------------------------------------------------
-
-RegisterNetEvent('NB:openMenuUnicorn')
-AddEventHandler('NB:openMenuUnicorn', function()
-    OpenSocietyActionsMenu()
-end)
-
-RegisterNetEvent('NB:openMenuUnicorn')
-AddEventHandler('NB:openMenuUnicorn', function()
-    if ESX.UI.Menu.IsOpen('default', GetCurrentResourceName(), 'citizen_interaction') then
-        ESX.UI.Menu.Close('default', GetCurrentResourceName(), 'citizen_interaction')
-    end
-end)

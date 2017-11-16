@@ -5,9 +5,6 @@ FXServer ESX UNICORN JOB
 
 [REQUIREMENTS]
 
-* Auto mode
-  * No need to download another resource
-
 * Player management (billing and boss actions)
   * esx_society => https://github.com/ESX-Org/esx_society
   * esx_billing => https://github.com/ESX-Org/esx_billing

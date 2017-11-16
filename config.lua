@@ -12,7 +12,7 @@ Config.MissCraft                  = 10 -- %
 
 
 Config.AuthorizedVehicles = {
-    { name = 'unicornbus',  label = 'Vanilla Unicorn Bus' },
+    { name = 'rentalbus',  label = 'Vanilla Unicorn Bus' },
 }
 
 Config.Blips = {
