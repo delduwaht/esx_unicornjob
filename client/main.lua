@@ -1380,6 +1380,10 @@ Citizen.CreateThread(function()
 
         if CurrentAction == 'menu_boss_actions' and IsGradeBoss() then
 
+          local options = {
+            wash      = Config.EnableMoneyWash,
+          }
+
           ESX.UI.Menu.CloseAll()
 
           TriggerEvent('esx_society:openBossMenu', 'unicorn', function(data, menu)
@@ -1389,7 +1393,7 @@ Citizen.CreateThread(function()
             CurrentActionMsg  = _U('open_bossmenu')
             CurrentActionData = {}
 
-          end)
+          end,options)
 
         end
 
