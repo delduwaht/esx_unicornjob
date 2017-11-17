@@ -100,12 +100,12 @@ Config.Zones = {
         Color = { r = 238, g = 0, b = 0 },
         Type  = 23,
         Items = {
-            { name = 'jager',      label = 'Jägermeister',  price = 3 },
-            { name = 'vodka',      label = 'Vodka',         price = 4 },
-            { name = 'rhum',       label = 'Rhum',          price = 2 },
-            { name = 'whisky',     label = 'Whisky',        price = 7 },
-            { name = 'tequila',    label = 'Tequila',       price = 2 },
-            { name = 'martini',    label = 'Martini blanc', price = 5 }
+            { name = 'jager',      label = _U('jager'),   price = 3 },
+            { name = 'vodka',      label = _U('vodka'),   price = 4 },
+            { name = 'rhum',       label = _U('rhum'),    price = 2 },
+            { name = 'whisky',     label = _U('whisky'),  price = 7 },
+            { name = 'tequila',    label = _U('tequila'), price = 2 },
+            { name = 'martini',    label = _U('martini'), price = 5 }
         },
     },
 
@@ -115,12 +115,12 @@ Config.Zones = {
         Color = { r = 238, g = 110, b = 0 },
         Type  = 23,
         Items = {
-            { name = 'soda',        label = 'Soda',         price = 4 },
-            { name = 'jusfruit',    label = 'Jus de fruits', price = 3 },
-            { name = 'icetea',      label = 'Ice Tea',    price = 4 },
-            { name = 'energy',      label = 'Energy Drink', price = 7 },
-            { name = 'drpepper',    label = 'Dr. Pepper',   price = 2 },
-            { name = 'limonade',    label = 'Limonade',     price = 1 }
+            { name = 'soda',        label = _U('soda'),     price = 4 },
+            { name = 'jusfruit',    label = _U('jusfruit'), price = 3 },
+            { name = 'icetea',      label = _U('icetea'),   price = 4 },
+            { name = 'energy',      label = _U('energy'),   price = 7 },
+            { name = 'drpepper',    label = _U('drpepper'), price = 2 },
+            { name = 'limonade',    label = _U('limonade'), price = 1 }
         },
     },
 
@@ -130,12 +130,12 @@ Config.Zones = {
         Color = { r = 142, g = 125, b = 76 },
         Type  = 23,
         Items = {
-            { name = 'bolcacahuetes',   label = 'Bol de cacahuètes',    price = 7 },
-            { name = 'bolnoixcajou',    label = 'Bol de noix de cajou', price = 10 },
-            { name = 'bolpistache',     label = 'Bol de pistache',      price = 15 },
-            { name = 'bolchips',        label = 'Bol de chips',         price = 5 },
-            { name = 'saucisson',       label = 'Saucisson',            price = 25 },
-            { name = 'grapperaisin',    label = 'Grappe de raisin',     price = 15 }
+            { name = 'bolcacahuetes',   label = _U('bolcacahuetes'),    price = 7 },
+            { name = 'bolnoixcajou',    label = _U('bolnoixcajou'),     price = 10 },
+            { name = 'bolpistache',     label = _U('bolpistache'),      price = 15 },
+            { name = 'bolchips',        label = _U('bolchips'),         price = 5 },
+            { name = 'saucisson',       label = _U('saucisson'),        price = 25 },
+            { name = 'grapperaisin',    label = _U('grapperaisin'),     price = 15 }
         },
     },
 
@@ -145,8 +145,8 @@ Config.Zones = {
         Color = { r = 255, g = 255, b = 255 },
         Type  = 23,
         Items = {
-            { name = 'ice',     label = 'Glaçon',               price = 1 },
-            { name = 'menthe',  label = 'Feuille de menthe',    price = 2 }
+            { name = 'ice',     label = _U('ice'),      price = 1 },
+            { name = 'menthe',  label = _U('menthe'),   price = 2 }
         },
     },
 
@@ -162,10 +162,7 @@ Config.TeleportZones = {
     Size      = { x = 1.2, y = 1.2, z = 0.1 },
     Color     = { r = 128, g = 128, b = 128 },
     Marker    = 1,
-    Blip      = false,
-    Name      = "Bar : entrée",
-    Type      = "teleport",
-    Hint      = "Appuyez sur ~INPUT_PICKUP~ pour passer derrière le bar.",
+    Hint      = _U('e_to_enter_1'),
     Teleport  = { x = 126.742, y = -1278.386, z = 28.569 }
   },
 
@@ -174,10 +171,7 @@ Config.TeleportZones = {
     Size      = { x = 1.2, y = 1.2, z = 0.1 },
     Color     = { r = 128, g = 128, b = 128 },
     Marker    = 1,
-    Blip      = false,
-    Name      = "Bar : sortie",
-    Type      = "teleport",
-    Hint      = "Appuyez sur ~INPUT_PICKUP~ pour passer devant le bar.",
+    Hint      = _U('e_to_exit_1'),
     Teleport  = { x = 131.175, y = -1295.598, z = 28.569 },
   },
 
@@ -187,10 +181,7 @@ Config.TeleportZones = {
     Size      = { x = 2.0, y = 2.0, z = 0.2 },
     Color     = { r = 204, g = 204, b = 0 },
     Marker    = 1,
-    Blip      = false,
-    Name      = "Héliport : entrée",
-    Type      = "teleport",
-    Hint      = "Appuyez sur ~INPUT_PICKUP~ pour monter sur le toit.",
+    Hint      = _U('e_to_enter_2),
     Teleport  = { x = -65.944, y = -818.589, z =  320.801 }
   },
 
@@ -199,10 +190,7 @@ Config.TeleportZones = {
     Size      = { x = 2.0, y = 2.0, z = 0.2 },
     Color     = { r = 204, g = 204, b = 0 },
     Marker    = 1,
-    Blip      = false,
-    Name      = "Héliport : sortie",
-    Type      = "teleport",
-    Hint      = "Appuyez sur ~INPUT_PICKUP~ pour descendre dans les bureaux.",
+    Hint      = _U('e_to_exit_2'),
     Teleport  = { x = 124.164, y = -728.231, z = 241.801 },
   },
 ]]--
