@@ -49,8 +49,9 @@ AddEventHandler('esx_unicornjob:putStockItems', function(itemName, count)
   TriggerEvent('esx_addoninventory:getSharedInventory', 'society_unicorn', function(inventory)
 
     local item = inventory.getItem(itemName)
+    local playerItemCount = xPlayer.getInventoryItem(itemName).count
 
-    if item.count >= 0 then
+    if item.count >= 0 and count <= playerItemCount then
       xPlayer.removeInventoryItem(itemName, count)
       inventory.addItem(itemName, count)
     else
@@ -102,8 +103,9 @@ AddEventHandler('esx_unicornjob:putFridgeStockItems', function(itemName, count)
   TriggerEvent('esx_addoninventory:getSharedInventory', 'society_unicorn_fridge', function(inventory)
 
     local item = inventory.getItem(itemName)
+    local playerItemCount = xPlayer.getInventoryItem(itemName).count
 
-    if item.count >= 0 then
+    if item.count >= 0 and count <= playerItemCount then
       xPlayer.removeInventoryItem(itemName, count)
       inventory.addItem(itemName, count)
     else
