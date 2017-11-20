@@ -132,7 +132,7 @@ AddEventHandler('esx_unicornjob:buyItem', function(itemName, price, itemLabel)
         societyAccount = account
       end)
     
-    if societyAccount >= price then
+    if societyAccount ~= nil and societyAccount.money >= price then
         if qtty < limit then
             societyAccount.removeMoney(price)
             xPlayer.addInventoryItem(itemName, 1)
