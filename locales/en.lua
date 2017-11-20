@@ -80,6 +80,7 @@ Locales['en'] = {
     ['soda']                     = 'Soda',
     ['whisky']                   = 'Whisky',
     ['rhum']                     = 'Rhum',
+    ['tequila']                  = 'Tequila',
     ['menthe']                   = 'Mint',
     ['jusfruit']                 = 'Fruit juice',
     ['jagerbomb']                = 'Jägerbomb',

@@ -126,10 +126,15 @@ AddEventHandler('esx_unicornjob:buyItem', function(itemName, price, itemLabel)
     local xPlayer  = ESX.GetPlayerFromId(_source)
     local limit = xPlayer.getInventoryItem(itemName).limit
     local qtty = xPlayer.getInventoryItem(itemName).count
+    local societyAccount = nil
 
-    if xPlayer.get('money') >= price then
+    TriggerEvent('esx_addonaccount:getSharedAccount', 'society_unicorn', function(account)
+        societyAccount = account
+      end)
+    
+    if societyAccount >= price then
         if qtty < limit then
-            xPlayer.removeMoney(price)
+            societyAccount.removeMoney(price)
             xPlayer.addInventoryItem(itemName, 1)
             TriggerClientEvent('esx:showNotification', _source, _U('bought') .. itemLabel)
         else

@@ -881,7 +881,7 @@ function OpenGetFridgeStocksMenu()
     end
 
     ESX.UI.Menu.Open(
-      'default', GetCurrentResourceName(), 'stocks_menu',
+      'default', GetCurrentResourceName(), 'fridge_menu',
       {
         title    = _U('unicorn_fridge_stock'),
         elements = elements
@@ -891,7 +891,7 @@ function OpenGetFridgeStocksMenu()
         local itemName = data.current.value
 
         ESX.UI.Menu.Open(
-          'dialog', GetCurrentResourceName(), 'stocks_menu_get_item_count',
+          'dialog', GetCurrentResourceName(), 'fridge_menu_get_item_count',
           {
             title = _U('quantity')
           },
@@ -942,7 +942,7 @@ ESX.TriggerServerCallback('esx_unicornjob:getPlayerInventory', function(inventor
     end
 
     ESX.UI.Menu.Open(
-      'default', GetCurrentResourceName(), 'stocks_menu',
+      'default', GetCurrentResourceName(), 'fridge_menu',
       {
         title    = _U('fridge_inventory'),
         elements = elements
@@ -952,7 +952,7 @@ ESX.TriggerServerCallback('esx_unicornjob:getPlayerInventory', function(inventor
         local itemName = data.current.value
 
         ESX.UI.Menu.Open(
-          'dialog', GetCurrentResourceName(), 'stocks_menu_put_item_count',
+          'dialog', GetCurrentResourceName(), 'fridge_menu_put_item_count',
           {
             title = _U('quantity')
           },
